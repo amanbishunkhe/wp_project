@@ -1,0 +1,79 @@
+// abstracts (global variable, function, mixin and placeholder)
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// vendors (CSS files from external libraries and frameworks)
+
+@import 'vendors/bootstrap';
+@import 'vendors/slick';
+@import 'vendors/slick-theme';
+@import 'vendors/magnific-popup';
+@import 'vendors/mCustomScrollbar';
+@import 'vendors/select2';
+
+// base (boilerplate code)
+
+// @import 'base/reset';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/typography';
+
+
+// layout (everything that takes part in laying out the site)
+
+//@import 'layout/layout';
+@import 'layout/common';
+@import 'layout/buttons';
+
+// layout/sections
+@import 'layout/sections/usps';
+@import 'layout/sections/why-readymix';
+@import 'layout/sections/showcase';
+@import 'layout/sections/parallax-cta';
+@import 'layout/sections/intro';
+@import 'layout/sections/zig-zag';
+@import 'layout/sections/clients-logo';
+@import 'layout/sections/full-cta';
+@import 'layout/sections/seo-content';
+@import 'layout/sections/accordion';
+@import 'layout/sections/lcontent-rimage';
+@import 'layout/sections/faq';
+@import 'layout/sections/instagram-section';
+@import 'layout/sections/block-cta';
+@import 'layout/sections/concrete-calculator';
+@import 'layout/sections/service-areas';
+@import 'layout/sections/popular-products';
+@import 'layout/sections/latest-projects';
+@import 'layout/sections/testimonials';
+
+@import 'layout/sections/readymix-products';
+@import 'layout/sections/projects-showcase';
+@import 'layout/sections/product-filter-w-lister-module';
+
+// @import 'layout/sections/hero-slider';
+@import 'layout/sections/display-centers';
+
+// component (for smaller components like buttons, carousel, widgets, loader)
+@import "components/wp-classes";
+@import "components/print-media";
+@import "components/header";
+@import "components/navigation";
+@import "components/footer";
+@import "components/forms";
+
+
+//page (page-specific styles)
+@import "pages/homepage";
+@import "pages/gallery";
+@import "pages/get-a-quote";
+@import "pages/contact-us";
+@import "pages/calculator";
+@import "pages/default";
+
+@import "pages/shop";
+@import "pages/cart";
+@import "pages/checkout";
+@import "pages/my-account";
+
+@import "pages/single-readymix-projects";

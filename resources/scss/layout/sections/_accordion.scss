@@ -1,0 +1,111 @@
+// accordion
+.accordion-wrap {
+    .card {
+        margin-bottom: 8px;
+        border-radius: $border-radius;
+        border: 0;
+    }
+
+    .card-header {
+        background-color: transparent;
+        padding: 0;
+        border-bottom: 0;
+
+        h5 {
+            button {
+                background-color: transparent;
+                padding: 13px 65px 11px 20px;
+                width: 100%;
+                border: 1px solid $light_grey;
+                text-align: left;
+                font-family: $font-primary;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: $color_text;
+                position: relative;
+                border-radius: 0;
+
+                @include breakpoint(small) {
+                    padding: 8px 40px 8px 10px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:after {
+                    content: '';
+                    // border-left: 2px solid $dark_pink;
+                    // border-bottom: 2px solid $dark_pink;
+                    height: 24px;
+                    width: 24px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0%, -50%);
+                    right: 19px;
+                    background-image: url('../../images/icons-chevron-down.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    @include breakpoint(small) {
+                        right: 20px;
+                    }
+                }
+
+                &:not(.collapsed) {
+                    border-radius: $border-radius $border-radius 0 0;
+
+                    // border-radius: 0;
+                    &:after {
+                        transform: translate(0%, -50%) scale(1, -1);
+                    }
+                }
+
+                &.collapsed {
+                    &:after {
+                        // top: 56%;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-body {
+        background-color: #fdeff5;
+        padding: 23px 20px 21px;
+        border-radius: 0px 0px $border-radius $border-radius;
+        // border-radius: 0;
+
+        @include breakpoint(small) {
+            padding: 20px 17px;
+        }
+
+        .container {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        p {
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+
+            @include breakpoint(small) {
+                font-size: 14px;
+            }
+        }
+
+        .button-wrap {
+            .btn {
+                @include breakpoint(small) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

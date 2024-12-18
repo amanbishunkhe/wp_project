@@ -1,0 +1,198 @@
+.blockContent_seoFaqs {
+    padding-bottom: 80px;
+
+    @include breakpoint(medium) {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.js .blockContent_seoFaqs {
+    color: #8b8d8e;
+    background-color: #ececec;
+    padding: 60px 0;
+
+    @include breakpoint(medium) {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    &-title {
+        .text {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+
+            @include breakpoint(medium) {}
+        }
+    }
+
+    &-col {}
+
+    &-item {
+        text-align: left;
+        margin-bottom: 16px;
+
+        @include breakpoint(medium) {
+            margin-bottom: 8px;
+        }
+
+        &.active {
+            position: relative;
+            z-index: 1111;
+        }
+
+        .inner {
+            background-color: #fff;
+            // border-radius: 4px;
+            padding: 0 20px;
+            color: #000;
+            box-shadow: 0 8px 12px 0 rgba(64, 72, 71, 0.10);
+            border-radius: $border-radius;
+
+            @include breakpoint(medium) {
+                padding: 14px 16px;
+            }
+
+            &.open {
+
+                /* background-color: #E8F5F8; */
+                .title {
+                    h4 {
+                        // color: var(--brandColor);
+                    }
+
+                    .icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .title {
+            position: relative;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            min-height: 60px;
+            padding-right: 30px;
+
+            @include breakpoint(medium) {
+                padding-right: 40px;
+                min-height: auto;
+                display: block;
+            }
+
+            h4 {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            .icon {
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width: 12px;
+                height: 12px;
+                line-height: 12px;
+                text-align: center;
+                transition: all ease-in-out 0.3s;
+
+                @include breakpoint(medium) {
+                    top: 6px;
+                }
+
+                svg path {
+                    stroke: $dark_pink;
+                }
+            }
+        }
+
+        .text {
+            display: none;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            padding-top: 0;
+            font-size: 14px;
+            line-height: 18px;
+
+            @include breakpoint(medium) {
+                padding-top: 10px;
+                padding-right: 40px;
+                padding-bottom: 10px;
+            }
+
+            .container {
+                padding: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.blockContent_seoFaqs-hidden {
+    display: none;
+
+    &--text {
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.seo-block-inner {
+    max-width: 753px;
+    margin: 0 auto;
+}
+
+.blockContent_seoFaqs-content--btn {
+    padding-top: 15px;
+
+    @include breakpoint(small) {
+        padding-top: 5px;
+    }
+
+    .btn-link {
+        position: relative;
+        padding-bottom: 28px !important;
+
+        @include breakpoint(small) {
+            padding-bottom: 20px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('../../images/icons-chevron-down.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 22px;
+            width: 22px;
+            @include transition(0.4s);
+        }
+
+        &.opened {
+            &:after {
+                transform: translateX(-50%) scale(1, -1);
+            }
+        }
+    }
+}
+
+.blockContent_seoFaqs-content--intro {
+    p {
+        color: $black;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: 0 0 24px;
+        }
+    }
+}

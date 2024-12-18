@@ -1,0 +1,229 @@
+.entry-title {
+    a {
+        text-decoration: none;
+    }
+}
+
+.entry-meta {
+    margin-block-end: 20px;
+    font-size: 14px;
+
+    time {
+        margin: 0 5px;
+    }
+}
+
+.entry-footer {
+    font-size: 14px;
+
+    span {
+        margin: 0 5px;
+    }
+}
+
+.archive,
+.category,
+.search-results {
+    .site-main {
+        article {
+            padding-block-start: 30px;
+            padding-block-end: 30px;
+            border-bottom: 1px solid $color_text_primary;
+
+            @include breakpoint(small) {
+                padding-block-start: 25px;
+                padding-block-end: 25px;
+            }
+        }
+    }
+}
+
+.posts-navigation,
+#comments {
+    margin-block-start: 40px;
+}
+
+.error404 {
+
+    input[type="search"] {
+        padding-block: 12px !important;
+        height: auto !important;
+
+        @include breakpoint(smaller) {
+            margin-block-end: 5px;
+        }
+    }
+}
+
+.error-404.not-found,
+body.search .section-search,
+body.archive .section-search {
+    padding-block: 82px;
+
+    @include breakpoint(medium) {
+        padding-block: 66px;
+    }
+
+    @include breakpoint(small) {
+        padding-block: 45px;
+    }
+}
+
+.page-content,
+article .entry-summary {
+    p {
+        font-weight: 400;
+        font-size: 18px;
+
+        @include breakpoint(medium) {
+            font-size: 17px;
+        }
+
+        @include breakpoint(small) {
+            font-size: 16px;
+        }
+    }
+}
+
+.error-404.not-found {
+    .page-header {
+        margin: 0 0 20px;
+
+        h1 {
+            @media screen and (min-width: 1200px) {
+                font-size: 48px;
+            }
+        }
+    }
+
+    .page-content {
+        .button-wrap {
+            padding-top: 20px;
+
+            @include breakpoint(small) {
+                padding-top: 12px;
+            }
+
+            a {
+                width: auto;
+                background-color: $dark_pink !important;
+                color: $white !important;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.default-content-wrap {
+    font-size: 16px;
+
+    ul {
+        margin-block-end: 30px;
+    }
+}
+
+.site-main {
+    min-height: 69vh;
+
+    @include breakpoint(small) {
+        min-height: 60vh;
+    }
+
+    @media screen and (max-width: 991px) and (orientation: landscape) {
+        min-height: unset;
+    }
+}
+
+.section-search,
+.section-archive-posts {
+    .page-header {
+        margin: 0 0 25px;
+
+        .page-title {
+            span {
+                color: $dark_cyan;
+            }
+        }
+    }
+
+    article {
+
+        .entry-summary p,
+        .post-thumbnail {
+            margin-top: 20px;
+        }
+
+        .entry-header {
+            .entry-title {
+                a {
+                    @include transition(0.4s color);
+
+                    &:hover {
+                        color: $dark_pink;
+                    }
+                }
+            }
+        }
+
+        .entry-summary {
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .post-thumbnail {
+            display: block;
+        }
+    }
+
+    .posts-navigation a,
+    input.search-submit {
+        width: auto;
+        display: block;
+        padding: 13px 20px;
+        color: $white;
+        background-color: $dark_pink;
+        text-decoration: none;
+        @include transition(0.4s opacity);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+
+        @include breakpoint(medium) {
+            font-size: 15px;
+        }
+
+        @include breakpoint(extrasmall) {
+            font-size: 14px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .posts-navigation {
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    form.search-form {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 6px;
+        margin-top: 25px;
+
+        input[type=submit] {
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,637 @@
+.page-contact-us {
+    .mfp-bg {
+        opacity: 0.6;
+    }
+
+    .calulate-address-wrapper {
+        .quote-calculate-wrapper {
+            padding: 0 0 70px 14%;
+
+            @include breakpoint(small) {
+                padding: 40px;
+            }
+
+            a {
+                min-width: inherit;
+                padding: 9px 19px;
+            }
+
+            h5 {
+                margin-bottom: 11px;
+                font-weight: 600;
+
+                @include breakpoint(small) {
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.43;
+                margin-bottom: 16px;
+                color: $grey-paragraph;
+
+                @include breakpoint(small) {
+                    margin-bottom: 26px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .quote-address {
+            @include breakpoint(small) {
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .form-main-wrapper {
+        .form-main {
+            .gform_heading {
+                display: block;
+
+                .gform_title {
+                    font-size: 22px;
+                    font-weight: normal;
+                    line-height: 1.23;
+                    color: $color_heading;
+                    margin-bottom: 19px;
+                    text-align: left;
+                    font-weight: 600;
+
+                    @include breakpoint(small) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            form {
+                .gform_body {
+                    .gform_fields {
+                        .gfield {
+                            padding-right: 10px;
+                        }
+                    }
+
+                    textarea {
+                        height: 96px;
+                    }
+
+                    .ginput_recaptcha {
+                        margin-bottom: 23px;
+
+                        @include breakpoint(small) {
+                            margin-bottom: 35px;
+                        }
+                    }
+
+                    .gfield_checkbox {
+                        .gchoice {
+                            position: relative;
+                            padding-left: 26px;
+
+                            input[type=checkbox] {
+                                height: 17px;
+                                width: 17px;
+                                background-color: transparent;
+                                border: 1px solid $grey-readymix;
+                                border-radius: 3px;
+                                appearance: none;
+                                position: absolute;
+                                top: 3px;
+                                left: 0;
+                                background-size: 12px;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                @include transition(0.4s all);
+
+                                @include breakpoint(small) {
+                                    top: 2px;
+                                }
+
+                                &:checked {
+                                    background-color: $grey-readymix;
+                                    background-image: url('../../images/tick-white.svg');
+                                }
+                            }
+
+                            label {
+                                position: static;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .select2-container {
+                width: 100% !important;
+            }
+        }
+
+        .gform_confirmation_wrapper {
+            background: $color_heading;
+            padding: 50px 15px;
+            border-radius: 5px;
+        }
+    }
+
+    .mfp-container {
+        .gform_confirmation_wrapper {
+            padding-top: 92px;
+            padding-bottom: 92px;
+        }
+    }
+
+    .enquiry-wrapper {
+        h4 {
+            font-size: 21px;
+            line-height: 1.48;
+            font-weight: 600;
+            margin-bottom: 7px;
+            margin-top: 10px;
+
+            @include breakpoint(small) {
+                font-size: 16px;
+                margin-bottom: 5px;
+                line-height: 1.5;
+                margin-top: 0;
+            }
+        }
+
+        .Paragraph-Gray-16px-Left {
+            font-size: 16px;
+            line-height: 1.43;
+            color: $color_heading;
+
+            @include breakpoint(small) {
+                font-size: 14px;
+            }
+        }
+
+        .actions {
+            padding: 10px 0 86px;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(small) {
+                padding: 3px 0 43px;
+            }
+
+            .btn {
+                color: $white;
+
+                @include breakpoint(extrasmall) {
+                    padding: 9px 19px;
+                }
+
+                @include breakpoint(iPhone5) {
+                    min-width: inherit;
+                    padding: 9px 10px;
+                }
+            }
+
+            .phone {
+                font-size: 26px;
+                line-height: 1.15;
+                color: $color_text_primary;
+                margin-right: 30px;
+                text-decoration: none;
+                font-weight: 600;
+
+                @include breakpoint(extrasmall) {
+                    font-size: 16px;
+                    line-height: 1.44;
+                    background-color: $color_text_primary;
+                    color: $white;
+                    padding: 7px 24px;
+                    border-radius: 50px;
+                    margin-right: 5px;
+
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                @include breakpoint(iPhone5) {
+                    padding: 7px 13px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                img,
+                .svg,
+                svg {
+                    margin-right: 8px;
+                    width: 24px;
+                    height: 24px;
+                    position: relative;
+                    top: -2px;
+
+                    @include breakpoint(extrasmall) {
+                        height: 17px;
+                        width: 17px;
+                        margin-right: 3px;
+                        margin-top: 1px;
+                        filter: brightness(0) invert(1);
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        height: 540px;
+
+        .container {
+            .row {
+                padding-top: 90px;
+
+                @include breakpoint(small) {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .col-lg-6 {
+            &:first-child {
+                @include breakpoint(medium) {
+                    margin-top: auto;
+                }
+            }
+
+            &:last-child {
+                @include breakpoint(medium) {
+                    margin-bottom: auto;
+                }
+            }
+        }
+
+        .hero-content {
+            @include breakpoint(extrasmall) {
+                padding: 87px 10px 0 20px;
+            }
+
+            h1 {
+                @include breakpoint(small) {
+                    margin-bottom: 9px;
+                }
+            }
+
+            p {
+                @include breakpoint(small) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .global-link-strip {
+        @include breakpoint(small) {
+            display: none;
+        }
+
+        ul {
+            text-align: center;
+
+            @include breakpoint(small) {
+                text-align: left;
+            }
+
+            li {
+                a {
+                    font-family: $font-secondary;
+                }
+            }
+        }
+    }
+
+    .breadcrumb-sec {
+        padding: 18px 0 20px;
+
+        @include breakpoint(small) {
+            padding: 22px 0 15px;
+            background-color: $white;
+        }
+    }
+
+    .mfp-container {
+        background-color: transparent;
+
+        @include breakpoint(small) {
+            background: #374255;
+        }
+    }
+
+    .mfp-wrap {
+        background-color: rgba(55, 66, 85, 0.6);
+
+        @include breakpoint(small) {
+            background: $color_heading;
+        }
+    }
+
+    .mfp-bg {
+        @include breakpoint(small) {
+            background: #374255;
+            opacity: 1;
+        }
+    }
+
+    .mfp-wrap {
+        z-index: 99999999;
+    }
+
+    .select2-container {
+        text-align: left;
+        z-index: 99999999;
+    }
+
+    #callback-module {
+        .select2-container {
+            z-index: 9999999999;
+        }
+    }
+}
+
+.hero {
+    .cta-box {
+        background-color: rgba(255, 255, 255, 0.86);
+        max-width: 448px;
+        float: right;
+        padding: 45px 60px;
+
+        @include breakpoint(medium) {
+            float: none;
+            max-width: 400px;
+            padding: 26px 35px;
+        }
+
+        @include breakpoint(extrasmall) {
+            padding: 18px 30px 19px;
+            margin: 0 20px;
+        }
+
+        h4 {
+            margin-bottom: 11px;
+            font-size: 22px;
+            line-height: 1.23;
+            color: $grey-readymix;
+
+            @include breakpoint(extrasmall) {
+                font-size: 16px;
+                line-height: 1.25;
+                margin-bottom: 8px;
+            }
+        }
+
+        p {
+            line-height: 1.43;
+            margin-bottom: 30px;
+
+            @include breakpoint(extrasmall) {
+                margin-bottom: 8px;
+                line-height: 1.5;
+                color: $grey-paragraph;
+            }
+        }
+
+        .btn {
+            min-width: 200px;
+
+            &:hover {
+                background-color: $color_heading;
+                color: $white;
+            }
+        }
+    }
+}
+
+.callback-form-wrap {
+    width: 457px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    // background: #374255;
+    background: $color_text_primary;
+    color: $white;
+    border-radius: 5px;
+
+    @include breakpoint(small) {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .select2-container--default {
+        .select2-selection--single {
+            background-color: transparent;
+
+            .select2-selection__rendered {
+                color: $white;
+            }
+
+            span.select2-selection__arrow {
+                display: block;
+                background: url("../../images/icons-chevron-down-white.svg") no-repeat center;
+            }
+        }
+    }
+
+    .gfield {
+        padding-right: 10px;        
+
+        @include breakpoint(small) {
+            padding-right: 0;
+        }
+
+        label {
+            color: $white;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="search"],
+        select,
+        textarea {
+            color: $white;
+            width: 100%;
+            padding: 15px 10px 5px 10px;
+            margin-bottom: 0px;
+            background-color: transparent;
+        }
+
+        input {
+            &.hasDatepicker {
+                transition: 0s;
+                background: url("../../images/icons-chevron-down-white.svg") no-repeat 98.4% center;
+            }
+        }
+
+        &.request-populate-installers-state {
+            label.gfield_label {
+                opacity: 0;
+            }
+        }
+    }
+
+    .gform_title {
+        font-size: 22px;
+        line-height: 1.23;
+        margin-bottom: 9px;
+        text-align: left;
+        font-weight: 600;
+        color: $white;
+        text-align: center;
+    }
+
+    .gform_description {
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: normal;
+        color: $white;
+        margin-bottom: 30px;
+        display: block;
+
+        @include breakpoint(small) {
+            font-size: 14px;
+        }
+    }
+
+    .mfp-close {
+        top: 2px;
+        right: 12px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .gform_footer {
+        @include breakpoint(small) {
+            padding-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: $white;
+            color: $grey-readymix;
+            border: 0;
+
+            @include breakpoint(extrasmall) {
+                min-width: inherit;
+                display: block;
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: $grey-readymix;
+                color: $white;
+            }
+        }
+    }
+
+    .validation_error,
+    .validation_message {
+        color: $white;
+        font-size: 11px;
+        font-family: $font-secondary;
+        margin-top: 6px;
+        // margin-bottom: 11px;
+        line-height: 1.36;
+        position: relative;
+        padding-left: 17px;
+        text-align: left;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 12px;
+            height: 12px;
+            background: url("../../images/icons-exclamation-circle-light-white.svg");
+        }
+    }
+
+    .gform_confirmation_wrapper {
+        @include breakpoint(small) {
+            padding: 0 10%;
+        }
+
+        h2 {
+            font-size: 22px;
+            line-height: 1.23;
+            margin-bottom: 9px;
+
+            @include breakpoint(small) {
+                font-size: 18px;
+                line-height: 1.44;
+            }
+        }
+
+        p {
+            font-family: $font-secondary;
+            margin-bottom: 40px;
+
+            @include breakpoint(small) {
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.mfp-close {
+    font-size: 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 3px;
+        top: 15px;
+        width: 12px;
+        height: 12px;
+        background: url("../../images/icon-close.svg") no-repeat center;
+    }
+
+    &.btn {
+        color: $grey-readymix;
+        font-size: 10px;
+        position: static;
+        height: auto;
+        display: inline-block;
+        line-height: 2.5;
+
+        &:hover {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+            width: 0;
+        }
+    }
+}
+
+/*======================================*/
+/*UI Date Picker css only*/
+/*======================================*/
+
+div#ui-datepicker-div {
+    z-index: 9999999999 !important;
+}

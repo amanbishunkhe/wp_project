@@ -1,0 +1,260 @@
+.section-my-account {
+    .my-account-wrap {
+        max-width: 440px;
+        margin-inline: auto;
+
+        #customer_register {
+            h3 {
+                text-align: center;
+                margin: 0 0 12px;
+
+                @media screen and (min-width: 1200px) {
+                    font-size: 30px;
+                    line-height: 38px;
+                }
+            }
+
+            >p {
+                text-align: center;
+                margin: 0 0 32px;
+            }
+        }
+
+
+        form {
+            &.woocommerce-form {
+                margin: 0 0 32px;
+                box-shadow: 0px 2px 4px -2px #1018280F, 0px 4px 8px -2px #1018281A;
+                padding: 32px 40px;
+                border-radius: 12px;
+                background-color: $white;
+                width: 100%;
+
+                @include breakpoint(smaller) {
+                    padding: 24px;
+                    margin: 0 0 22px;
+                }
+
+                .form-row {
+                    padding: 0;
+
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+
+                        @include breakpoint(smaller) {
+                            margin-bottom: 14px;
+                        }
+                    }
+
+                    label {
+                        font-weight: 400;
+                        color: #344054;
+
+                        &.woocommerce-form-login__rememberme {
+                            display: inline-flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            padding-left: 26px;
+                            position: relative;
+
+                            input.woocommerce-form__input {
+                                height: 18px;
+                                width: 18px;
+                                border: 1px solid #344054;
+                                appearance: none;
+                                border-radius: 0;
+                                padding: 0;
+                                position: absolute;
+                                top: calc(50% - 9px);
+                                left: 0px;
+
+                                &:checked {
+                                    background-image: url('../../images/tick-dark.svg');
+                                    background-size: 14px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                }
+                            }
+                        }
+                    }
+
+                    input {
+                        padding: 10px 14px;
+                        color: $color_text_primary;
+                        border: 1px solid #D0D5DD;
+                        box-shadow: 0px 1px 2px 0px #1018280D;
+                        background-color: $white;
+                        border-radius: 8px;
+
+                        &::placeholder {
+                            color: #667085;
+                            opacity: 1;
+                        }
+                    }
+
+                    button.woocommerce-button {
+                        border-radius: 8px;
+                        background-color: $dark_pink;
+                        color: $white;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        font-weight: 600;
+                        text-align: center;
+                        padding: 10px 24px;
+                    }
+                }
+
+                .lost_password {
+                    a {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .account-foot {
+            p {
+                font-size: 15px;
+                line-height: 1.5;
+                font-weight: 400;
+                color: #475467;
+                text-align: center;
+
+                a {
+                    color: $dark_cyan;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        #customer_register {
+            .woocommerce-form {
+                .form-row {
+                    button.woocommerce-button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-my-account {
+    .myaccount-wrap {}
+
+    .woocommerce-MyAccount-navigation {
+        ul {
+            padding-inline-start: 0;
+
+            li {
+                list-style-type: none;
+                border-bottom: 1px solid $light_grey;
+                background-color: rgba($dark_pink, 0.3);
+
+                &:last-child {
+                    border: none;
+                }
+
+                a {
+                    text-decoration: none;
+                    padding: 10px 15px;
+                    display: block;
+                    font-weight: 400;
+                }
+
+                &.is-active {
+                    a {
+                        font-weight: 600;
+                        color: $white;
+                        background-color: $dark_pink;
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-MyAccount-content {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+        }
+
+        p,
+        .title {
+
+            a {
+                &:hover {
+                    color: $dark_pink;
+                }
+            }
+        }
+
+        .woocommerce-info {
+
+            a.button {
+                &.wc-forward {
+                    background-color: $dark_pink;
+                    color: $white;
+                    border-radius: 50px;
+                    font-size: 15px;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-Address {
+            .woocommerce-Address-title {
+                h3 {
+                    @include breakpoint(medium) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-EditAccountForm {
+            fieldset {
+                margin-block: 30px 15px;
+                padding: 10px 15px;
+                border: 1px solid $color_text_primary;
+
+                legend {
+                    float: none;
+                    width: auto;
+                    padding-inline: 10px;
+                }
+            }
+        }
+
+        button.button {
+            background-color: $dark_cyan;
+            color: $white;
+            border-radius: 50px;
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+
+        .my_account_orders {
+            .woocommerce-orders-table__cell-order-actions {
+                a.button {
+                    width: auto;
+                    padding-inline: 20px;
+                    border-radius: 60px;
+                }
+            }
+        }
+    }
+}

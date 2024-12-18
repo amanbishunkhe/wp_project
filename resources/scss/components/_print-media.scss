@@ -1,0 +1,41 @@
+@media print {
+    head{
+      display: none;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+      color-adjust: exact !important;  /*Firefox*/
+      a{
+        text-decoration: none !important;
+      }
+      blockquote{
+        border: none;
+      }
+    }
+    .main-navigation {
+      display: none !important;
+    }
+    .site-footer{
+      a{
+        color: $white !important;
+      }
+    }
+    .site-header.stick-header {
+      position: static !important;
+    }
+    .block .full-cta a.btn{
+      color: $color_text !important;
+    }
+    img.for-print-media {
+      display: block !important;
+    }
+    .hero{
+      height: auto !important;
+      .hero-slider-main{
+        display: none !important;
+      }
+    }
+    .wow.fadeInUp{
+      visibility: visible !important;
+    }
+  }

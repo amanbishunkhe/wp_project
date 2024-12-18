@@ -1,0 +1,303 @@
+.section-projects-showcase {
+    padding-block: 0 44px;
+
+    @include breakpoint(small) {
+        padding-block: 44px;
+    }
+
+    .gallery-grid {
+        margin: 0;
+
+        .tile {
+            width: calc(100% - 6px);
+            height: 636px;
+            margin: 0 3px 6px;
+            position: relative;
+            border-radius: 3px;
+            overflow: hidden;
+            -webkit-mask-image: -webkit-radial-gradient($white, $black);
+
+            @include breakpoint(wide) {
+                height: 536px;
+            }
+
+            @include breakpoint(medium) {
+                height: 436px;
+            }
+
+            @include breakpoint(extrasmall) {
+                height: 300px !important;
+                width: calc(100% - 6px) !important;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 70%;
+                opacity: 0.74;
+                background-image: linear-gradient(to bottom, rgba($black, 0) 29%, rgba($black, 0.72));
+                pointer-events: none;
+            }
+
+            .image-holder {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            &.video-pop {
+                .action {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+
+                    &:after {
+                        content: "";
+                        @include center();
+                        width: 63px;
+                        height: 63px;
+                        background: url("../../images/icons-play-2.svg") no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            &.image-pop {
+                .action {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        width: 22px;
+                        height: 22px;
+                        background: url("../../images/expand-icon.svg") no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .abs-content-wrap {
+                position: absolute;
+                left: 20px;
+                bottom: 50px;
+                opacity: 0;
+                padding-right: 50px;
+                z-index: 1;
+                @include transition(0.4s);
+
+                @include breakpoint(wide) {
+                    padding-right: 20px;
+                    left: 16px;
+                    bottom: 13px;
+                }
+
+                @include breakpoint(extrasmall) {
+                    opacity: 1;
+                }
+
+                .gallery-tag {
+                    font-family: $font-secondary;
+                    font-size: 11px;
+                    font-weight: normal;
+                    line-height: 2.18;
+                    letter-spacing: 0.92px;
+                    color: $white;
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                }
+
+                .gallery-title {
+                    margin-bottom: 0;
+                    font-size: 22px;
+                    font-weight: normal;
+                    line-height: 1.23;
+                    color: $white;
+
+                    @include breakpoint(extrasmall) {
+                        font-size: 16px;
+                        line-height: 1.25;
+                    }
+                }
+            }
+
+            &:hover {
+                .image-holder {
+                    @include transition(0.8s);
+                    transform: scale(1.09);
+                }
+
+                .abs-content-wrap {
+                    opacity: 1;
+                }
+            }
+
+            &.full {
+                width: calc(100% - 6px);
+            }
+
+            &.mini {
+                height: 303px;
+            }
+        }
+
+        .tile {
+            &:nth-child(7n + 1) {}
+
+            &:nth-child(7n + 2),
+            &:nth-child(7n + 4),
+            &:nth-child(7n + 6),
+            &:nth-child(7n + 7) {
+                height: 303px;
+                float: left;
+                width: calc(50% - 6px);
+
+                @include breakpoint(wide) {
+                    height: 253px;
+                }
+            }
+
+            &:nth-child(7n + 3) {
+                height: 612px;
+                float: right;
+                width: calc(50% - 6px);
+
+                @include breakpoint(wide) {
+                    height: 512px;
+                }
+            }
+
+            &:nth-child(7n + 5) {
+                height: 612px;
+                float: left;
+                width: calc(50% - 6px);
+
+                @include breakpoint(wide) {
+                    height: 512px;
+                }
+            }
+        }
+
+        &.showcase-grid {
+            .abs-content {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding: 20px;
+                text-align: left;
+                z-index: 1;
+                width: 100%;
+
+                @media screen and (min-width: 1200px) {
+                    padding-block-end: 49px;
+                    bottom: -20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transition: 0.4s visibility, 0.4s opacity, 0.4s bottom;
+                }
+
+                @include breakpoint(small) {
+                    padding: 14px;
+                }
+
+                h6 {
+                    font-size: 22px;
+                    color: $white;
+                    width: 85%;
+                    line-height: 1.22;
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    font-family: $font-primary;
+                    color: $white;
+
+                    @include breakpoint(wide) {
+                        width: 100%;
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(small) {
+                        font-size: 18px;
+                    }
+                }
+
+                ul.location-tag {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    background-color: transparent;
+
+                    li {
+                        font-size: 11px;
+                        line-height: 24px;
+                        letter-spacing: 0.92px;
+                        font-weight: 400;
+                        color: $white;
+                        text-transform: uppercase;
+                        padding: 0;
+                        font-family: $font-secondary;
+                        background-color: transparent;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .tile {
+                &:hover {
+                    .abs-content {
+                        @media screen and (min-width: 1200px) {
+                            bottom: 0;
+                            opacity: 1;
+                            visibility: visible;
+                            pointer-events: all;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.cstm-layout-1 {
+        .gallery-grid {
+            .tile {
+                width: calc(100% - 6px) !important;
+                height: 636px !important;
+
+                @include breakpoint(wide) {
+                    height: 536px !important;
+                }
+
+                @include breakpoint(medium) {
+                    height: 436px !important;
+                }
+
+                @include breakpoint(extrasmall) {
+                    height: 300px !important;
+                }
+
+                .abs-content {
+                    bottom: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}

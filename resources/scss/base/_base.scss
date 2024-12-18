@@ -1,0 +1,48 @@
+@import "https://use.typekit.net/wiw8jck.css";
+
+html {
+  scroll-behavior: unset !important;
+}
+
+img,
+video {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+body {
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: $color_text;
+
+  @include breakpoint(small) {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // color: $medium_pink;
+  color: $color_heading;
+  font-family: $font-secondary;
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+b,
+strong {
+  font-weight: bold;
+}

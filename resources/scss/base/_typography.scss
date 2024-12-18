@@ -1,0 +1,103 @@
+h1 {
+    font-size: 60px;
+    line-height: 1.15;
+
+    @include breakpoint(wide) {
+        font-size: 48px;
+        // line-height: 1.05;
+    }
+
+    @include breakpoint(small) {
+        font-size: 38px;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 38px;
+    line-height: 1.21;
+
+    @include breakpoint(wide) {
+        font-size: 30px;
+        line-height: 1.16;
+    }
+
+    @include breakpoint(small) {
+        font-size: 24px;
+    }
+
+    span {
+        color: $dark_pink;
+    }
+}
+
+h3 {
+    font-size: 26px;
+    line-height: normal;
+    font-weight: 600;
+
+    @include breakpoint(small) {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: 330px) {
+        font-size: 18px;
+    }
+
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 1.36;
+
+    @include breakpoint(small) {
+        font-size: 18px;
+        line-height: 1.66;
+    }
+
+    @media screen and (max-width: 330px) {
+        font-size: 16px;
+    }
+}
+
+h5 {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    sup {
+        top: -2.9em;
+        font-size: 24%;
+        font-weight: 600;
+        display: inline-block;
+        line-height: 1;
+        left: -0.2em;
+    }
+}
+
+.Paragraph-Black-11px-Left {
+    font-family: $font_secondary;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 2.18;
+    letter-spacing: 0.92px;
+    color: $color_heading;
+}
+.H5-Black-Left {
+    font-family: $font_primary;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: $color_heading;
+}

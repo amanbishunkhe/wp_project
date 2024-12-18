@@ -1,0 +1,461 @@
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.gform_ajax_spinner {
+    position: absolute;
+    top: 8px;
+
+    @include breakpoint(small) {
+        right: -15px;
+    }
+}
+
+input[type='text'],
+input[type='phone'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+select,
+textarea {
+    border-radius: 3px;
+    border: solid 1px $grey-light;
+    font-family: $font-primary;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $grey-paragraph;
+    -webkit-appearance: none;
+    outline: none !important;
+}
+
+input[type=search] {
+    padding-left: 48px !important;
+    background-image: url('../../images/search.svg');
+    background-size: 19px;
+    height: 42px;
+    background-color: #f2f2f2;
+    border: 1px solid #cfc8d8;
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    border-radius: 0;
+
+    &+ {
+        .tribe-events-c-search__input-control-icon-svg {
+            display: none;
+        }
+    }
+}
+
+textarea {
+    height: inherit;
+}
+
+input:disabled {
+    border: 1px solid transparent !important;
+    color: $white !important;
+    background-color: #CACCD0 !important;
+    cursor: no-drop;
+}
+
+@supports (-webkit-touch-callout: none) {
+    input:disabled {
+        color: $white !important;
+    }
+}
+
+.gform_footer {
+    position: relative;
+}
+
+.gform_fields {
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    padding: 0;
+
+    li {
+        &.gfield {
+            .gfield_checkbox {
+                margin: 0 0 20px 0;
+                list-style-type: none;
+                display: block;
+                padding: 0;
+
+                label {
+                    position: static;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.gfield_error {
+
+            input,
+            select,
+            textarea,
+            .select2-selection {
+                border: solid 1px $brick !important;
+                background-color: rgba(155, 46, 41, 0.1) !important;
+
+                >.select2-selection__rendered {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+form {
+    li {
+        margin-left: 0;
+        list-style-type: none;
+        list-style-image: none;
+        list-style: none;
+        overflow: visible;
+    }
+}
+
+.top_label {
+    li {
+        &.gfield {
+
+            &.gf_left_half,
+            &.gf_right_half {
+                display: -moz-inline-stack;
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                padding-right: 10px;
+                float: none;
+
+                @include breakpoint(small) {
+                    width: 100%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.gfield {
+    position: relative;
+
+    &.gf_left_half,
+    &.gf_right_half {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding-right: 10px;
+        float: none;
+
+        @include breakpoint(small) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+
+    label {
+        font-family: $font-primary;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 1.5;
+        color: $grey-paragraph;
+        font-weight: 400 !important;
+
+        .gfield_required {
+            display: none;
+        }
+    }
+
+    &.hide-label {
+        .gfield_label {
+            display: none;
+        }
+    }
+}
+
+span.gfield_required {
+    position: relative;
+    z-index: 9999999;
+}
+
+.gfield input {
+    @include transition(0.4s);
+}
+
+.gfield label {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    @include transition(0.4s);
+    cursor: text;
+    //z-index: 1;
+}
+
+.gfield.active input {
+    // padding-left: 15px;
+}
+
+.gfield.active label {
+    top: 4px !important;
+    font-size: 9px !important;
+}
+
+.select2-container {
+    //width: 100% !important;
+    margin-bottom: 4px;
+    z-index: 9;
+
+    .select2-selection--single {
+        border-radius: 0;
+        border: solid 1px #ececec;
+        font-family: $font-primary;
+        font-size: 14px;
+        font-style: normal;
+        color: $grey-paragraph;
+        line-height: 1.5;
+        letter-spacing: normal;
+        -webkit-appearance: none;
+        height: auto;
+        background-color: $white;
+
+        .select2-selection__rendered {
+            padding: 10px 10px;
+            line-height: inherit;
+            color: $grey-paragraph;
+        }
+
+        span.select2-selection__arrow {
+            top: 24%;
+            right: 0px;
+            height: 24px;
+            width: 24px;
+            background: url("../../images/icons-chevron-down.svg") no-repeat center;
+            //display: none;
+            @include transition(0.4s);
+
+            b {
+                display: none;
+            }
+        }
+    }
+
+    .select2-results__options {
+        background: $light_grey;
+    }
+
+    .select2-results__option--highlighted.select2-results__option--selectable {
+        background: rgba($white, 0.8);
+        color: $grey-paragraph;
+
+    }
+
+    .select2-results__option--selected {
+        background-color: #eef1f3;
+        color: $grey-paragraph;
+    }
+
+    .select2-results__option--selectable {
+        background: transparent;
+        color: $white;
+        font-family: $font-secondary;
+        font-size: 14px;
+        margin-top: -1px;
+        // border-top: 1px solid $grey-light;
+        padding: 11px 15px 8px;
+    }
+
+    .select2-dropdown {
+        border: 0px;
+        border-top: 0;
+        overflow: hidden;
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .select2-search--dropdown {
+        display: none;
+    }
+
+    &.with-product-open {
+        .select2-search--dropdown {
+            display: block;
+        }
+    }
+
+    &.select2-container--open {
+        .select2-selection {
+            border: 1px solid $grey-light;
+        }
+
+        span.select2-selection__arrow {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+    }
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single {
+    cursor: not-allowed;
+}
+
+.gfield {
+    margin-bottom: 15px;
+
+    // &:not(.active) {
+    input {
+        &.gform-datepicker {
+            color: transparent;
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    // }
+}
+
+body {
+    &.woocommerce-page {
+
+        .woocommerce,
+        .product {
+            .form-row {
+                label {
+                    font-weight: 400;
+                }
+            }
+
+            input:not([type=submit]):not([type=checkbox]):not([type=radio]),
+            textarea,
+            select {
+                padding: 12px 10px;
+                font-weight: 400;
+                border-radius: 0;
+                background-color: #f2f2f2;
+                border: 0;
+                height: 46px;
+            }
+        }
+
+    }
+}
+
+.mfp-content {
+    .gform_heading {
+        h3.gform_title {
+            font-size: 26px;
+            margin-bottom: 20px;
+
+            @include breakpoint(small) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+#installer-quote-modal {
+    .disable-input {
+        pointer-events: none;
+
+        input {
+            pointer-events: none;
+            background: #ededed;
+        }
+    }
+}
+
+.table-consent-form {
+
+    .form-main {
+        background: transparent;
+
+        h3 {
+            font-size: 22px;
+            line-height: 1.23;
+            color: $grey-light;
+            margin-bottom: 41px;
+            font-family: $font-primary;
+
+            @include breakpoint(small) {
+                font-size: 18px;
+                line-height: 1.44;
+                margin-bottom: 15px;
+            }
+        }
+
+        .gform_wrapper {
+            background-color: transparent !important;
+            padding: 0 !important;
+
+            .gfield {
+                margin-bottom: 17px;
+                clear: both;
+
+                @include breakpoint(small) {
+                    margin-bottom: 16px;
+                }
+
+                &.hidden_label {
+                    .gfield_label {
+                        display: none;
+                    }
+                }
+
+                .gfield_checkbox {
+                    margin-bottom: 21px !important;
+                    overflow: hidden;
+
+                    @include breakpoint(small) {
+                        margin-bottom: 0 !important;
+                    }
+
+                    li {
+                        margin-bottom: 0;
+
+                        &:before {
+                            top: 10px;
+                        }
+
+                        label {
+
+                            &:before,
+                            &:after {
+                                top: 10px;
+                            }
+                        }
+                    }
+
+                    label {
+                        font-size: 14px !important;
+                        line-height: 1.5;
+                        padding-left: 30px;
+
+                        @include breakpoint(small) {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    input[type="checkbox"] {
+                        position: absolute;
+                    }
+                }
+
+                &.html-label {
+                    color: $color_text;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .validation_error {
+        display: none;
+    }
+}

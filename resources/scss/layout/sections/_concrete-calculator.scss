@@ -1,0 +1,156 @@
+.section-concrete-calculator {
+    padding-block: 144px 89px;
+
+    @include breakpoint(medium) {
+        padding-block: 94px 89px;
+    }
+
+    @include breakpoint(small) {
+        padding-block: 124px 70px;
+    }
+
+    @include breakpoint(smaller) {
+        padding-block: 104px 50px;
+    }
+
+    .cc-wrapper {
+        position: relative;
+        background-color: $dark_pink;
+        border-radius: 4px;
+
+        @include breakpoint(small) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cc-content {
+            padding: 39px 40px;
+            width: 60%;
+
+            @include breakpoint(small) {
+                width: 100%;
+                order: 2;
+                padding: 24px 20px;
+            }
+
+            h3,
+            p {
+                color: $white;
+                max-width: 503px;
+            }
+
+            p {
+                margin: 0 0 26px;
+            }
+
+            h3 {
+                margin: 0 0 2px;
+            }
+
+            .button-wrap {
+                .btn {
+                    padding-inline: 40px;
+
+                    &.small {
+                        font-size: 12px;
+                        line-height: 1.5;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .cc-image {
+            position: absolute;
+            bottom: 0;
+            right: 43px;
+            height: 306px;
+            width: 329px;
+            overflow: hidden;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            @include breakpoint(medium) {
+                width: 256px;
+                right: 24px;
+            }
+
+            @include breakpoint(small) {
+                position: static;
+                order: 1;
+                width: auto;
+                height: auto;
+                display: block;
+                margin-inline: auto;
+                margin-top: -55px;
+            }
+
+            @include breakpoint(extrasmall) {
+                width: calc(100% - 40px);
+            }
+
+            img {
+                width: 100%;
+                object-fit: 100%;
+                object-position: top;
+
+                @include breakpoint(small) {
+                    width: fit-content;
+                }
+
+                @include breakpoint(extrasmall) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.total-estimate-wall-inner {
+    position: relative;
+    top: unset !important;
+    left: unset !important;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: auto;
+    transform: unset;
+    margin-inline: auto;
+
+    @include breakpoint(small) {
+        width: 100%;
+        max-width: 600px;
+        padding: 24px;
+        max-height: 90%;
+        overflow: auto;
+    }
+}
+
+.total-estimate-wall {
+    padding: 30px;
+    align-items: center;
+
+    @include breakpoint(small) {
+        padding: 20px;
+    }
+
+    &:before {
+        background-color: rgba($black, 0.5);
+    }
+
+    &.open {
+        display: flex;
+    }
+
+    .total-estimate-wall-inner {
+        .gform_footer {
+            input[type=submit] {
+                &:hover {
+                    color: $dark_pink;
+                }
+            }
+        }
+    }
+}

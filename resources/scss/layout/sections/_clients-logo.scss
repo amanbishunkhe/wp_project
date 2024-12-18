@@ -1,0 +1,100 @@
+.section-clients {
+    padding-top: 84px;
+    padding-bottom: 76px;
+
+    @include breakpoint(small) {
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+
+    .section-title {
+        text-align: center;
+
+        h2 {
+            margin: 0 0 20px;
+
+            @include breakpoint(small) {
+                margin: 0 0 15px;
+            }
+
+            br {
+                display: none;
+
+                @include breakpoint(smaller) {
+                    display: block;
+                }
+            }
+        }
+
+        p {
+            max-width: 750px;
+            margin: 0 auto;
+
+            @include breakpoint(small) {
+                text-align: left;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+
+                @include breakpoint(small) {
+                    margin-bottom: 21px;
+                }
+            }
+
+            br {
+                @include breakpoint(small) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .clients-logo-grid {
+        margin: 0 -42px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        max-width: 974px;
+        margin: 0 auto;
+        padding-top: 54px;
+
+        @include breakpoint(medium) {
+            margin: 0 -24px;
+        }
+
+        @include breakpoint(small) {
+            margin: 0;
+            padding-top: 30px;
+        }
+
+        .logo {
+            padding: 0 25px;
+            flex: 25%;
+            max-width: 25%;
+            margin: 0 0 30px;
+
+            @include breakpoint(medium) {
+                padding: 0 16px;
+            }
+
+            @include breakpoint(smaller) {
+                flex: 50%;
+                max-width: 50%;
+                padding: 0 22px 0 28px;
+                text-align: center;
+                margin: 0 0 37px;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &.no-sec-title {
+        .clients-logo-grid {
+            padding-top: 0;
+        }
+    }
+}

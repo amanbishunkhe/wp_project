@@ -1,0 +1,235 @@
+.left-right-wrapper {
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .text-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        &.right-image {
+            .img-wrap {
+                order: 2;
+
+                @include breakpoint(small) {
+                    order: 0;
+                }
+            }
+
+            .content-wrap {
+                order: 1;
+
+                @media (min-width: 1200px) {
+                    // padding: 20px 81px 20px 7%;
+                    padding: 20px 74px 20px calc((100vw - 1155px) / 2);
+                }
+
+                @media (min-width: 1400px) {
+                    padding: 20px 74px 20px calc((100vw - 1155px) / 2);
+                }
+
+                @media (min-width: 1600px) {
+                    padding: 20px 74px 20px 148px;
+                }
+
+                @include breakpoint(small) {
+                    order: 0;
+                }
+            }
+        }
+
+        &.left-image {
+            .content-wrap {
+                @media (min-width: 1200px) {
+                    // padding: 20px 81px 20px 7%;
+                    padding: 20px calc((100vw - 1155px) / 2) 20px 68px;
+                }
+
+                @media (min-width: 1400px) {
+                    padding: 20px calc((100vw - 1155px) / 2) 20px 68px;
+                }
+
+                @media (min-width: 1600px) {
+                    padding: 20px 148px 20px 68px;
+                }
+            }
+        }
+
+        .img-wrap {
+            flex: 0 0 60%;
+            max-width: 60%;
+
+            @include breakpoint(small) {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content-wrap {
+            max-width: 40%;
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;            
+
+            @include breakpoint(wide) {
+                padding: 20px 6.9%;
+            }
+
+            @include breakpoint(medium) {
+                padding: 20px 3%;
+            }
+
+            @include breakpoint(small) {
+                max-width: 100%;
+                flex: 0 0 100%;
+                padding: 20px 15px 31px;
+            }
+
+            @include breakpoint(extrasmall) {
+                padding: 27px 15px 50px;
+            }
+
+            h4 {
+                @include breakpoint(medium) {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    &.container-width {
+        .container {
+            @media screen and (min-width: 1600px) {
+                width: 1440px;
+            }
+        }
+
+        .text-wrap {
+            .content-wrap {
+                h4 {
+                    font-family: $font-secondary;
+                    font-size: 26px;
+                    font-weight: normal;
+                    line-height: 1.15;
+                    letter-spacing: normal;
+                    margin-bottom: 9px;
+                    color: $dark_pink;
+                    font-weight: bold;
+                    ;
+
+                    @include breakpoint(wide) {
+                        font-size: 24px;
+                    }
+
+                    @include breakpoint(medium) {
+                        font-size: 19px;
+                        margin-bottom: 10px;
+                    }
+
+                    @include breakpoint(small) {
+                        font-size: 18px;
+                        line-height: 1.44;
+                    }
+
+                    sup {
+                        font-weight: normal;
+                        top: 0;
+                        font-size: inherit;
+                    }
+                }
+
+                p {
+                    font-family: $font-primary;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+
+                    @include breakpoint(medium) {
+                        font-size: 14px;
+                    }
+
+                    @include breakpoint(extrasmall) {
+                        //margin-bottom: 0;
+                    }
+
+                    &:not(:last-child) {
+                        margin: 0 0 24px;
+                    }
+                }
+
+                .button-wrap {
+                    margin-top: -10px;
+
+                    .btn {
+                        @include breakpoint(small) {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.full-width {
+        .text-wrap {
+            .content-wrap {
+                padding-block: 115px;
+                justify-content: center;
+
+                @media screen and (min-width: 1921px) {
+                    padding-right: calc((100vw - 1161px) / 2);
+                    flex: 0 0 45%;
+                    max-width: 45%;
+                }
+
+                @include breakpoint(wide) {
+                    padding-block: 55px;
+                }
+
+                @include breakpoint(small) {
+                    padding-block: 35px;
+                }
+
+                h4 {
+                    margin: 0 0 24px;
+                }
+
+                .button-wrap {
+                    .btn-outline-white {
+                        font-size: 10px;
+                        line-height: 12.19px;
+                        border-radius: 3px;
+                        min-height: 33px;
+                        min-width: 165px;
+                        text-align: center;
+                        justify-content: center;
+                        @include breakpoint(small) {
+                            width: 165px;
+                        }
+                    }
+                }
+            }
+
+            .img-wrap {
+                @media screen and (min-width: 1921px) {
+                    flex: 0 0 55%;
+                    max-width: 55%;
+                }
+
+                img {
+                    object-position: right;
+                }
+            }
+        }
+    }
+}

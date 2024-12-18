@@ -1,0 +1,119 @@
+.parallax-cta {
+    position: relative;
+    padding: 53px 0 49px;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    @include breakpoint(small) {
+        min-height: unset;
+        height: auto;
+        padding: 41px 0 40px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(small) {
+            padding: 0 30px;
+        }
+    }
+
+    .cta-box {
+        max-width: 448px;
+        padding: 40px 41px 33px;
+        border-radius: $border-radius;
+        background-color: $dark_pink;
+        text-align: center;
+
+        @include breakpoint(wide) {
+            margin: 0 auto;
+        }
+
+        @include breakpoint(small) {
+            padding: 24px 24px 20px;
+            margin: 0 15px;
+            border-radius: $border-radius;
+        }
+
+        h3 {
+            color: $white;
+            margin-bottom: 8px;
+
+            @include breakpoint(small) {
+                font-size: 20px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+            }
+        }
+
+        .btn {
+            min-width: 200px;
+
+            &:hover {
+                background: $dark_pink;
+                color: $white;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: $white;
+
+            @include breakpoint(small) {
+                margin: 0;
+            }
+        }
+    }
+
+    .bcg {
+        @include center();
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &.cta-right {
+        .cta-box {
+            float: right;
+
+            @include breakpoint(wide) {
+                float: none;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .absolute-background-image {
+        img {
+            transform: scale(1.2);
+
+            @include breakpoint(small) {
+                display: none;
+                transform: scale(1);
+            }
+
+            &.img-mobile {
+                display: none;
+
+                @include breakpoint(small) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

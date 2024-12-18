@@ -1,0 +1,63 @@
+{
+    "key": "group_666004f551181",
+    "title": "Woocommerce Products Block",
+    "fields": [
+        {
+            "key": "field_666004f60560a",
+            "label": "Section Color",
+            "name": "section_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This block use to display products in shop, and cart page .\r\nSelect category to dispaly from Readymix option.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6662b5ab7a7ab",
+            "label": "Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/readymix-woocommerce-products"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717745105
+}

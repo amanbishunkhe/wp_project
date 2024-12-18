@@ -1,0 +1,61 @@
+.why-readymix {
+    padding-bottom: 79px;
+    clear: both;
+
+    @include breakpoint(medium) {
+        padding-bottom: 50px;
+    }
+
+    @include breakpoint(small) {
+        padding-bottom: 36px;
+    }
+
+    .title-row {
+        padding: 70px 0 50px;
+
+        @include breakpoint(medium) {
+            padding: 35px 0 45px;
+        }
+
+        @include breakpoint(small) {
+            padding: 31px 0 43px;
+        }
+
+        h2 {
+            margin: 0;
+            max-width: 331px;
+
+            @include breakpoint(medium) {
+                max-width: 100%;
+            }
+
+            br {
+                @media screen and (min-width: 568px) {
+                    display: none;
+                }
+
+                @media screen and (min-width: 992px) and (max-width: 11199px) {
+                    display: block;
+                }
+            }
+
+            span {
+                columns: $dark_pink;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: $color_text;
+            font-family: $font-primary;
+            font-weight: 400;
+            padding-top: 5px;
+            max-width: 550px;
+
+            @include breakpoint(medium) {
+                max-width: 100%;
+                padding-top: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.global-link-strip {
+    padding: 20px 0 18px;
+    background-color: $light_grey;
+
+    @include breakpoint(medium) {
+        padding: 20px 0 0;
+    }
+
+    @include breakpoint(small) {
+        padding-bottom: 19px;
+    }
+
+    .usp-lists {
+        margin: 0;
+        padding: 0 0 0 24px;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 1299px) {
+            padding: 0 24px;
+            // justify-content: unset;
+            // align-items: center;
+        }
+
+        @include breakpoint(wide) {
+            justify-content: unset;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .usp-list {
+            position: relative;
+            // padding-left: 29px;
+            font-size: 15px;
+            font-family: $font-secondary;
+            font-weight: 600;
+            color: $color_text;
+            list-style: none;
+
+            @include breakpoint(wide) {
+                flex: 25%;
+                max-width: 25%;
+                padding-right: 10px;
+            }
+
+            @include breakpoint(medium) {
+                flex: 50%;
+                max-width: 50%;
+                margin: 0 0 20px;
+            }
+
+            @include breakpoint(small) {
+                flex: unset;
+                max-width: unset;
+                padding-right: 0;
+                text-align: center;
+                margin: 0;
+            }
+
+            &:not(:first-child) {
+                @include breakpoint(small) {
+                    display: none;
+                }
+            }
+
+            img {
+                margin-right: 5px;
+
+                @include breakpoint(small) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

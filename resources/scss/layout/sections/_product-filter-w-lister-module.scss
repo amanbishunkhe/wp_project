@@ -1,0 +1,200 @@
+#product-listing-filter {
+    padding: 80px 0 40px;
+
+    @include breakpoint(medium) {
+        padding: 60px 0 40px;
+    }
+
+    @include breakpoint(small) {
+        padding: 40px 0 30px;
+    }
+
+    h3,
+    h4 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .select-area {
+        &.readymix-product-select-area {
+            padding: 20px 20px 30px;
+            background-color: $grey-paragraph;
+        }
+    }
+
+    .filter-row {
+        .selection-option-list {
+
+            @media screen and (min-width: 992px) {
+                margin-right: 15px;
+                width: 180px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 230px;
+            }
+
+            @include breakpoint(medium) {
+                margin: 0;
+                width: 32.5%;
+            }
+
+            @include breakpoint(small) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            li {
+
+                &.always,
+                &.changed {
+                    padding-left: 0;
+                }
+
+                &.always {
+                    &.trigger {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &.has-bg {
+            .select-title {
+                @media screen and (max-width: 1199px) and (min-width: 992px) {
+                    padding-right: 10px;
+                }
+            }
+
+            .cus-pdf-download {
+                @include breakpoint(medium) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.download-btn-wrap {
+    margin-top: 35px;
+    display: none;
+
+    @include breakpoint(small) {
+        margin-bottom: 20px;
+    }
+
+    a {
+        @include transition(0.3s);
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.44;
+        font-size: 18px;
+        text-decoration: none;
+        letter-spacing: normal;
+        color: $grey-paragraph;
+
+        svg,
+        img {
+            margin-left: 5px;
+
+            path {
+                fill: $color_heading;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $color_heading;
+            opacity: 0.6;
+        }
+    }
+}
+
+
+#product-filter-load-more,
+#display-centre-load-more {
+    text-align: center;
+    padding-top: 20px;
+
+    @include breakpoint(small) {
+        padding-top: 22px;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
+
+.product-list-wrapper {
+    padding-bottom: 50px;
+    clear: both;
+
+    @include breakpoint(small) {
+        padding-bottom: 35px;
+    }
+
+    .lister-layout {
+        margin: 0;
+
+        @include breakpoint(small) {
+            margin: 0 -5px;
+        }
+
+        .col-lg-3 {
+            padding: 0;
+            margin-bottom: 18px;
+
+            @include breakpoint(small) {
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    .product-list {
+        height: 100%;
+    }
+
+    .product-item {
+        .inner {
+            margin: 0 3px;
+            box-shadow: unset;
+
+            @include breakpoint(small) {
+                margin: 0 5px;
+            }
+
+            .detail {
+                // .mata-cat {
+                //     &:not(:first-of-type) {
+                //         display: none;
+                //     }
+                // }
+
+                // br {
+                //     &:not(:first-of-type) {
+                //         display: none;
+                //     }
+                // }
+
+                .product-name {
+                    color: $grey-readymix;
+                    margin-bottom: 0.5rem;
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        &:hover {
+            .inner {
+                box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.17);
+            }
+        }
+    }
+}
+
+.mfp-figure {
+    &:after {
+        background-color: transparent;
+    }
+}

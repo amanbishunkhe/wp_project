@@ -1,0 +1,205 @@
+// faq wrapper
+.faq-wrapper {
+    background-color: $white;
+    padding: 58px 0 30px;
+
+    @include breakpoint(small) {
+        padding: 45px 0 30px;
+    }
+
+    h2 {
+        margin-bottom: 23px;
+        color: $dark_pink;
+    }
+
+    .Paragraph-Gray-16px-Left {
+        max-width: 555px;
+    }
+
+    p {
+        br {
+            @include breakpoint(small) {
+                display: none;
+            }
+        }
+    }
+
+    .accordion-wrap {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .link-wrap {
+        position: absolute;
+        right: 0;
+        top: -60px;
+
+        @include breakpoint(small) {
+            position: static;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 15px 3px 0;
+        }
+    }
+}
+
+// faq-topic
+.faq-topic-wrapper {
+    padding: 60px 0;
+
+    @include breakpoint(small) {
+        padding: 40px 0 33px;
+    }
+
+    &.grey-light {
+        background-color: $grey-light;
+
+        .faq-list {
+            a {
+                @media (min-width: 767px) {
+                    padding: 27px 25px;
+                }
+            }
+
+            h6 {
+                @include breakpoint(smaller) {
+                    text-align: center;
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    padding: 0 15%;
+                }
+            }
+        }
+
+        .faq-list {
+            a {
+                @media screen and (max-width: 567px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    &.grey-lighter {
+        background-color: $grey-lighter;
+
+        @media (min-width: 767px) {
+            padding-bottom: 80px;
+        }
+
+        .faq-list {
+            a {
+                @include breakpoint(extrasmall) {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    h4 {
+        margin-bottom: 18px;
+    }
+
+    p {
+        br {
+            @include breakpoint(small) {
+                display: none;
+            }
+        }
+    }
+
+    .faq-list-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 33px -3px 0;
+        position: relative;
+
+        @media (max-width: 666px) {
+            margin: 0;
+        }
+    }
+
+    .faq-list {
+        // padding: 17px;
+        flex: 0 0 calc(33.33% - 6px);
+        max-width: calc(33.33% - 6px);
+        margin: 5px 3px;
+
+        @include breakpoint(medium) {
+            flex: 0 0 calc(50% - 6px);
+            max-width: calc(50% - 6px);
+        }
+
+        @media (max-width: 666px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin: 5px 0;
+        }
+
+        a {
+            background-color: $white;
+            border-radius: 0;
+            display: block;
+            height: 100%;
+            padding: 27px 20px;
+
+            @include breakpoint(small) {
+                padding: 18px 20px;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        h6 {
+            @include breakpoint(small) {
+                line-height: 1.25;
+            }
+        }
+
+        .tag {
+            font-family: $font-primary;
+            font-size: 11px;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 2.18;
+            letter-spacing: 0.92px;
+            color: $dark_cyan;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            p {
+                font-family: $font-primary;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: $grey-paragraph;
+                margin-bottom: 0;
+            }
+
+            @include breakpoint(smaller) {
+                display: none;
+            }
+        }
+    }
+
+    .link-wrap {
+        position: absolute;
+        right: 0;
+        top: -60px;
+
+        @include breakpoint(small) {
+            position: static;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 15px 3px 0;
+        }
+    }
+}

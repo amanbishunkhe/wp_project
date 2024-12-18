@@ -1,0 +1,82 @@
+.block-cta {
+    padding: 42px 0 99px;
+
+    @include breakpoint(small) {
+        padding: 0 0 30px;
+    }
+
+    .cta-row {
+        border-radius: $border-radius;
+        padding: 18px 82px;
+        background-color: $dark_pink;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint(wide) {
+            display: block;
+            align-items: unset;
+            justify-content: unset;
+        }
+
+        @include breakpoint(small) {
+            padding: 24px 34px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.28;
+            letter-spacing: normal;
+            color: $white;
+            margin-bottom: 0;
+            font-family: $font-secondary;
+            font-weight: 600;
+
+            @include breakpoint(small) {
+                font-size: 16px;
+            }
+
+            span {
+                color: rgba($light_pink, 1);
+            }
+
+            a:not(.btn) {
+                font-size: 18px;
+                line-height: 1.28;
+                letter-spacing: normal;
+                color: $white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .btn {
+            margin-left: 30px;
+            padding: 5px 25px;
+
+            @include breakpoint(wide) {
+                // display: block;
+                margin: 15px auto 0;
+                width: auto;
+            }
+
+            svg {
+                margin-left: 4px;
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $white;
+                        @include transition(0.4s);
+                    }
+                }
+            }
+        }
+    }
+}
